@@ -1,5 +1,6 @@
 import React, {ReactNode} from "react";
 import {RouteComponentProps} from "react-router-dom";
+import LoginPage from "../../../../cnf-2-fatures/f-1-auth/a-1-login/l-1-ui/LoginPage";
 
 export type PageType = {
     id: number;
@@ -16,7 +17,7 @@ export const PATH = {
 };
 
 export const pages: PageType[] = [
-    {id: 0, title: 'login', path: PATH.LOGIN, exact: true, page: () => <div>login</div>},
+    {id: 0, title: 'login', path: PATH.LOGIN, exact: true, page: () => <LoginPage/>},
     {id: 1, title: 'register', path: PATH.REGISTER, exact: true, page: () => <div>register</div>},
     {
         id: 2, title: 'profile', path: PATH.PROFILE, exact: true,
