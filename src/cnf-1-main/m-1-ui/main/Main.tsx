@@ -4,6 +4,8 @@ import Routes from "./routes/Routes";
 
 // headers, routes, footers
 const Main = () => {
+
+    console.log('render Main');
     return (
         <>
             <DevHeader/>

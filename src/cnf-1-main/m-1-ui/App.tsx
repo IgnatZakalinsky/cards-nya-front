@@ -7,6 +7,8 @@ import store from "../m-2-bll/store";
 
 // add context
 const App = () => {
+
+    console.log('render App');
     return (
         <div className="App">
             <HashRouter>
