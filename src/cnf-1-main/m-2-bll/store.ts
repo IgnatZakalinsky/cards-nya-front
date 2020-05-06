@@ -18,5 +18,9 @@ export type AppStoreType = ReturnType<typeof reducers>
 export type PropertiesType<T> = T extends {[key: string]: infer U} ? U : never;
 export type InferActionsType<T extends {[key: string]: (...arg: any[]) => any}> = ReturnType<PropertiesType<T>>
 
+export type ReturnVoid = void;
+export type ExtraArgumentNya = {};
+export type GetAppStoreType = () => AppStoreType;
+
 // @ts-ignore
 window.store = store; // for dev
