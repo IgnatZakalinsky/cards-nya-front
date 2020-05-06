@@ -1,6 +1,7 @@
 import React, {ChangeEvent} from "react";
 import InputNya from "../../../../cnf-0-common/c-1-ui/input/InputNya";
 import ButtonNya from "../../../../cnf-0-common/c-1-ui/button/ButtonNya";
+import {DEV_VERSION} from "../../../../index";
 
 type LoginPropsType = {
     email: string;
@@ -17,7 +18,7 @@ const Login: React.FC<LoginPropsType> = React.memo((
     {email, setEmail, pass, setPass, remember, setRemember, signIn}
 ) => {
 
-    console.log('render Login');
+    DEV_VERSION && console.log('render Login');
     return (
         <>
             <div><InputNya info={'email'} value={email} onChange={setEmail}/></div>

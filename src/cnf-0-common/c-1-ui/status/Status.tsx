@@ -1,4 +1,5 @@
 import React from "react";
+import {DEV_VERSION} from "../../../index";
 
 export type StatusPropsType = {
     loading: boolean;
@@ -10,7 +11,7 @@ export type StatusPropsType = {
 
 const Status: React.FC<StatusPropsType> = React.memo(({loading, success, error, info}) => {
 
-    info && console.log('render Status-' + info);
+    DEV_VERSION && info && console.log('render Status-' + info);
     return (
         <>
             {loading

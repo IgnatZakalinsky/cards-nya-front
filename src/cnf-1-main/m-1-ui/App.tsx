@@ -4,11 +4,12 @@ import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import Main from "./main/Main";
 import store from "../m-2-bll/store";
+import {DEV_VERSION} from "../../index";
 
 // add context
 const App = () => {
 
-    console.log('render App');
+    DEV_VERSION && console.log('render App');
     return (
         <div className="App">
             <HashRouter>

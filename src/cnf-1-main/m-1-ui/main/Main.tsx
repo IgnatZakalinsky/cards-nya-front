@@ -1,14 +1,15 @@
 import React from "react";
 import DevHeader from "./dev-header/DevHeader";
 import Routes from "./routes/Routes";
+import {DEV_VERSION} from "../../../index";
 
 // headers, routes, footers
 const Main = () => {
 
-    console.log('render Main');
+    DEV_VERSION && console.log('render Main');
     return (
         <>
-            <DevHeader/>
+            {DEV_VERSION && <DevHeader/>}
 
             <Routes/>
         </>

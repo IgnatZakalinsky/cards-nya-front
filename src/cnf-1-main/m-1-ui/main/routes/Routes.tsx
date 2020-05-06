@@ -1,6 +1,7 @@
 import React from "react";
 import {Switch, Route} from "react-router-dom";
 import {PageType, pages} from "./Pages";
+import {DEV_VERSION} from "../../../../index";
 
 const mappedRoutes = pages.map((p: PageType) => (
     <Route
@@ -13,7 +14,7 @@ const mappedRoutes = pages.map((p: PageType) => (
 
 const Routes = () => {
 
-    console.log('render Routes');
+    DEV_VERSION && console.log('render Routes');
     return (
         <Switch>
             {mappedRoutes}

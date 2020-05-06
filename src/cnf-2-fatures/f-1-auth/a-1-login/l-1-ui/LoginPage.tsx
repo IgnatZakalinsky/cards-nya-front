@@ -3,10 +3,11 @@ import LoginContainer from "./LoginContainer";
 import {PATH} from "../../../../cnf-1-main/m-1-ui/main/routes/Pages";
 import LinkNya from "../../../../cnf-0-common/c-1-ui/link/LinkNya";
 import LoginStatus from "./LoginStatus";
+import {DEV_VERSION} from "../../../../index";
 
 const LoginPage = () => {
 
-    console.log('render LoginPage');
+    DEV_VERSION && console.log('render LoginPage');
     return (
         <div>
             login

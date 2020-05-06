@@ -2,6 +2,8 @@ import {ThunkAction, ThunkDispatch} from "redux-thunk";
 import {AppStoreType} from "../../../../cnf-1-main/m-2-bll/store";
 import {ExtraArgumentNya, GetAppStoreType, ReturnVoid, tryCatch} from "../../../../cnf-1-main/m-2-bll/thunks";
 import {RegisterActions, RegisterActionsType} from "./RegisterActions";
+import {RegisterAPI} from "../r-3-dal/RegisterAPI";
+import {DEV_VERSION} from "../../../../index";
 
 export const signUp =
     (email: string, password: string, pass2: string)
@@ -14,18 +16,17 @@ export const signUp =
             // signInLoading(dispatch, true);
             dispatch(RegisterActions.setLoading(true));
 
-            tryCatch(
-                () => {
+            await tryCatch(
+                async () => {
                     if (password !== pass2) dispatch(RegisterActions.setError('Passwords don\'t match!'));
                     else {
 
-                        const data = {error: 'xxx'};
-                        // = await SignInAPI.signIn(email, passwordCoding(password), rememberMe);
+                        const data = await RegisterAPI.signUp(email, password);
 
                         if (data.error) {
                             dispatch(RegisterActions.setError(data.error));
 
-                            console.log('Nya, Register Error!', data);
+                            DEV_VERSION && console.log('Nya, Register Error!', data);
 
                         } else {
                             // setCookie('token', data.token, Math.floor(data.tokenDeathTime / 1000) - 180);
@@ -34,7 +35,7 @@ export const signUp =
                             // signInSuccess(dispatch, true);
                             dispatch(RegisterActions.setSuccess(true));
 
-                            console.log('Nya, Register Success!', data)
+                            DEV_VERSION && console.log('Nya, Register Success!', data)
                         }
                     }
                 },

@@ -1,6 +1,7 @@
 import React, {ChangeEvent} from "react";
 import InputNya from "../../../../cnf-0-common/c-1-ui/input/InputNya";
 import ButtonNya from "../../../../cnf-0-common/c-1-ui/button/ButtonNya";
+import {DEV_VERSION} from "../../../../index";
 
 type RegisterPropsType = {
     email: string;
@@ -17,7 +18,7 @@ const Register: React.FC<RegisterPropsType> = React.memo((
     {email, setEmail, pass, setPass, pass2, setPass2, signUp}
 ) => {
 
-    console.log('render Register');
+    DEV_VERSION && console.log('render Register');
     return (
         <>
             <div><InputNya info={'email'} value={email} onChange={setEmail}/></div>

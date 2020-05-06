@@ -1,16 +1,17 @@
 import {AppStoreType} from "./store";
+import {DEV_VERSION} from "../../index";
 
 export type ReturnVoid = void;
 export type ExtraArgumentNya = {};
 export type GetAppStoreType = () => AppStoreType;
 
-export const tryCatch = (logic: () => void, setError: (error: string) => void, info: string) => {
+export const tryCatch = async (logic: () => void, setError: (error: string) => void, info: string) => {
     try {
-        logic();
+        await logic();
 
     } catch (e) {
-        setError(e.response ? e.response.data.error : e.message);
+        setError(e.response ? e.response.data.error : (e.message + ', more details in the console'));
 
-        console.log('Nya, ' + info + ' Error!', {...e})
+        DEV_VERSION && console.log('Nya, ' + info + ' Error!', {...e})
     }
 };

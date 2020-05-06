@@ -1,6 +1,7 @@
 import React from "react";
 import {pages} from "../routes/Pages";
 import LinkNya from "../../../../cnf-0-common/c-1-ui/link/LinkNya";
+import {DEV_VERSION} from "../../../../index";
 
 const mappedLinks = pages.map(p => (
     <LinkNya
@@ -14,7 +15,7 @@ const mappedLinks = pages.map(p => (
 
 const DevHeader = () => {
 
-    console.log('render DevHeader');
+    DEV_VERSION && console.log('render DevHeader');
     return (
         <>
             {mappedLinks}
