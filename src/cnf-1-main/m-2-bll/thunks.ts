@@ -1,5 +1,5 @@
 import {AppStoreType} from "./store";
-import {DEV_VERSION} from "../../index";
+import {DEV_VERSION} from "../../config";
 
 export type ReturnVoid = void;
 export type ExtraArgumentNya = {};

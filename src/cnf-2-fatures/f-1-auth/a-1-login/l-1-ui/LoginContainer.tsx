@@ -2,7 +2,7 @@ import React, {ChangeEvent, useCallback, useState} from "react";
 import Login from "./Login";
 import {useDispatch} from "react-redux";
 import {signIn} from "../l-2-bll/loginThunk";
-import {DEV_VERSION} from "../../../../index";
+import {DEV_VERSION} from "../../../../config";
 
 const LoginContainer = React.memo(() => {
     const [email, setEmail] = useState<string>('');

@@ -4,7 +4,7 @@ import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import Main from "./main/Main";
 import store from "../m-2-bll/store";
-import {DEV_VERSION} from "../../index";
+import {DEV_VERSION} from "../../config";
 
 // add context
 const App = () => {

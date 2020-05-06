@@ -3,7 +3,7 @@ import {AppStoreType} from "../../../../cnf-1-main/m-2-bll/store";
 import {ExtraArgumentNya, GetAppStoreType, ReturnVoid, tryCatch} from "../../../../cnf-1-main/m-2-bll/thunks";
 import {RegisterActions, RegisterActionsType} from "./RegisterActions";
 import {RegisterAPI} from "../r-3-dal/RegisterAPI";
-import {DEV_VERSION} from "../../../../index";
+import {DEV_VERSION} from "../../../../config";
 
 export const signUp =
     (email: string, password: string, pass2: string)

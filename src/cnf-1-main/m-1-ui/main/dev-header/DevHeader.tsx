@@ -1,7 +1,7 @@
 import React from "react";
 import {pages} from "../routes/Pages";
 import LinkNya from "../../../../cnf-0-common/c-1-ui/link/LinkNya";
-import {DEV_VERSION} from "../../../../index";
+import {DEV_VERSION} from "../../../../config";
 
 const mappedLinks = pages.map(p => (
     <LinkNya

@@ -1,6 +1,6 @@
 import React, {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
 import s from "./ButtonNya.module.css";
-import {DEV_VERSION} from "../../../index";
+import {DEV_VERSION} from "../../../config";
 
 export type ButtonNyaPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
     & { info?: string };

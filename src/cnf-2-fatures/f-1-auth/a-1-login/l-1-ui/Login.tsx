@@ -1,7 +1,7 @@
 import React, {ChangeEvent} from "react";
 import InputNya from "../../../../cnf-0-common/c-1-ui/input/InputNya";
 import ButtonNya from "../../../../cnf-0-common/c-1-ui/button/ButtonNya";
-import {DEV_VERSION} from "../../../../index";
+import {DEV_VERSION} from "../../../../config";
 
 type LoginPropsType = {
     email: string;

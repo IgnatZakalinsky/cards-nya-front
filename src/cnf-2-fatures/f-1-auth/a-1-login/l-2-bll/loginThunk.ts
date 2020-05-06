@@ -3,7 +3,7 @@ import {AppStoreType} from "../../../../cnf-1-main/m-2-bll/store";
 import {LoginActions, LoginActionsType} from "./LoginActions";
 import {ExtraArgumentNya, GetAppStoreType, ReturnVoid, tryCatch} from "../../../../cnf-1-main/m-2-bll/thunks";
 import {LoginAPI} from "../l-3-dal/LoginAPI";
-import {DEV_VERSION} from "../../../../index";
+import {DEV_VERSION} from "../../../../config";
 
 export const signIn =
     (email: string, password: string, rememberMe: boolean)

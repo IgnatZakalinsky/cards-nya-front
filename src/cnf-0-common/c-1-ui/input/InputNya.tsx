@@ -1,6 +1,6 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes} from "react";
 import s from "./InputNya.module.css";
-import {DEV_VERSION} from "../../../index";
+import {DEV_VERSION} from "../../../config";
 
 export type InputNyaPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
     & { info?: string };

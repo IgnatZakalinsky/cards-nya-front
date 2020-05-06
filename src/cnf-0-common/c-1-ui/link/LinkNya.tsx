@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink, NavLinkProps} from "react-router-dom";
 import s from "./LinkNya.module.css";
-import {DEV_VERSION} from "../../../index";
+import {DEV_VERSION} from "../../../config";
 
 export type LinkNyaPropsType = NavLinkProps & { info?: string };
 

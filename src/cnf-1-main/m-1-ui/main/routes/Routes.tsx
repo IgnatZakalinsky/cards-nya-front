@@ -1,7 +1,7 @@
 import React from "react";
 import {Switch, Route} from "react-router-dom";
 import {PageType, pages} from "./Pages";
-import {DEV_VERSION} from "../../../../index";
+import {DEV_VERSION} from "../../../../config";
 
 const mappedRoutes = pages.map((p: PageType) => (
     <Route

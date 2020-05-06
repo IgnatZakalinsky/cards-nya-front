@@ -1,7 +1,7 @@
 import React from "react";
 import DevHeader from "./dev-header/DevHeader";
 import Routes from "./routes/Routes";
-import {DEV_VERSION} from "../../../index";
+import {DEV_VERSION} from "../../../config";
 
 // headers, routes, footers
 const Main = () => {

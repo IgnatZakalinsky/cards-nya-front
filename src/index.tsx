@@ -4,8 +4,6 @@ import './index.css';
 import App from './cnf-1-main/m-1-ui/App';
 import * as serviceWorker from './serviceWorker';
 
-export const DEV_VERSION = true;
-
 ReactDOM.render(
     <React.StrictMode>
         <App/>
