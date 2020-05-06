@@ -4,7 +4,7 @@ import s from "./LinkNya.module.css";
 
 export type LinkNyaPropsType = NavLinkProps & { info?: string };
 
-const LinkNya: React.FC<LinkNyaPropsType> = (
+const LinkNya: React.FC<LinkNyaPropsType> = React.memo((
     {
         info,
         ...props
@@ -12,7 +12,7 @@ const LinkNya: React.FC<LinkNyaPropsType> = (
 ) => {
 
     info && console.log('render LinkNya-' + info);
-    return  <NavLink className={s.link} {...props}/>;
-};
+    return <NavLink className={s.link} {...props}/>;
+});
 
 export default LinkNya;

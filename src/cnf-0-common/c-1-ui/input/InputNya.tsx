@@ -4,7 +4,7 @@ import s from "./InputNya.module.css";
 export type InputNyaPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
     & { info?: string };
 
-const InputNya: React.FC<InputNyaPropsType> = (
+const InputNya: React.FC<InputNyaPropsType> = React.memo((
     {
         info,
         ...props
@@ -13,6 +13,6 @@ const InputNya: React.FC<InputNyaPropsType> = (
 
     info && console.log('render InputNya-' + info);
     return <input className={s.inputNya} {...props}/>;
-};
+});
 
 export default InputNya;
