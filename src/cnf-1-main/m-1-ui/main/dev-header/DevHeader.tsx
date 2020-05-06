@@ -1,10 +1,15 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
 import {pages} from "../routes/Pages";
-import s from "./DevHeader.module.css";
+import LinkNya from "../../../../cnf-0-common/c-1-ui/link/LinkNya";
 
 const mappedLinks = pages.map(p => (
-    <NavLink key={'link-' + p.id} to={p.path || ''} className={s.link}>{p.title}</NavLink>
+    <LinkNya
+        key={'navLink-' + p.id}
+        to={(p.path || '') + (p.params ? '/1' : '')}
+        info={'navLink-' + p.id}
+    >
+        {p.title}
+    </LinkNya>
 ));
 
 const DevHeader = () => {
@@ -13,10 +18,8 @@ const DevHeader = () => {
     return (
         <>
             {mappedLinks}
-            
-            <NavLink to={'/profile/1'}>profile-1</NavLink>
         </>
-    )
+    );
 };
 
 export default DevHeader;

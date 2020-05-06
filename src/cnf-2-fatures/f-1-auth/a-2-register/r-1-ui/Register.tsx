@@ -4,19 +4,19 @@ import ButtonNya from "../../../../cnf-0-common/c-1-ui/button/ButtonNya";
 import LinkNya from "../../../../cnf-0-common/c-1-ui/link/LinkNya";
 import {PATH} from "../../../../cnf-1-main/m-1-ui/main/routes/Pages";
 
-const Login = () => {
+const Register = () => {
 
-    console.log('render Login');
+    console.log('render Register');
     return (
         <div>
-            login
+            register
             <div><InputNya info={'login'}/></div>
             <div><InputNya info={'pass'}/></div>
-            <div>forgot? (will be link)</div>
-            <div><ButtonNya info={'sign in'}>sign in</ButtonNya></div>
-            <LinkNya to={PATH.REGISTER} info={'register in login'}>register</LinkNya>
+            <div><InputNya info={'pass confirm'}/></div>
+            <div><ButtonNya info={'sign up'}>sign up</ButtonNya></div>
+            <LinkNya to={PATH.LOGIN} info={'login in register'}>login</LinkNya>
         </div>
     );
 };
 
-export default Login;
+export default Register;

@@ -1,10 +1,10 @@
 import React, {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
 import s from "./ButtonNya.module.css";
 
-export type ButtonNyaType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+export type ButtonNyaPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
     & { info?: string };
 
-const ButtonNya: React.FC<ButtonNyaType> = (
+const ButtonNya: React.FC<ButtonNyaPropsType> = (
     {
         info,
         ...props
@@ -12,7 +12,7 @@ const ButtonNya: React.FC<ButtonNyaType> = (
 ) => {
 
     info && console.log('render ButtonNya-' + info);
-    return <button className={s.buttonNya} {...props}/>
+    return <button className={s.buttonNya} {...props}/>;
 };
 
 export default ButtonNya;

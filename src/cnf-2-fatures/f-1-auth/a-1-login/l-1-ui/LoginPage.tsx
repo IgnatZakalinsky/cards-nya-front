@@ -6,7 +6,7 @@ const LoginPage = () => {
     console.log('render LoginPage');
     return (
         <LoginContainer/>
-    )
+    );
 };
 
 export default LoginPage;
