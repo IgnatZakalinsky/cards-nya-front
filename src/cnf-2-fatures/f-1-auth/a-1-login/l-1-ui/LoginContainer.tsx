@@ -17,7 +17,8 @@ const LoginContainer = React.memo(() => {
     console.log('render LoginContainer');
     return (
         <Login
-            email={email} setEmail={setEmailCallback} pass={pass} setPass={setPassCallback}
+            email={email} setEmail={setEmailCallback}
+            pass={pass} setPass={setPassCallback}
         />
     );
 });
