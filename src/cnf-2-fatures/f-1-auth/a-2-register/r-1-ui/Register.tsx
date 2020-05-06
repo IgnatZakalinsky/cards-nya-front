@@ -9,7 +9,7 @@ type RegisterPropsType = {
     setPass: (pass: ChangeEvent<HTMLInputElement>) => void;
     pass2: string;
     setPass2: (pass2: ChangeEvent<HTMLInputElement>) => void;
-}
+};
 
 const Register: React.FC<RegisterPropsType> = React.memo((
     {email, setEmail, pass, setPass, pass2, setPass2}

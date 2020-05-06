@@ -7,7 +7,7 @@ type LoginPropsType = {
     setEmail: (email: ChangeEvent<HTMLInputElement>) => void;
     pass: string;
     setPass: (pass: ChangeEvent<HTMLInputElement>) => void;
-}
+};
 
 const Login: React.FC<LoginPropsType> = React.memo((
     {email, setEmail, pass, setPass}
