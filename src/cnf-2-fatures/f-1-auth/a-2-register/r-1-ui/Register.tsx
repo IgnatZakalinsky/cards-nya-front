@@ -9,10 +9,12 @@ type RegisterPropsType = {
     setPass: (pass: ChangeEvent<HTMLInputElement>) => void;
     pass2: string;
     setPass2: (pass2: ChangeEvent<HTMLInputElement>) => void;
+
+    signUp: () => void;
 };
 
 const Register: React.FC<RegisterPropsType> = React.memo((
-    {email, setEmail, pass, setPass, pass2, setPass2}
+    {email, setEmail, pass, setPass, pass2, setPass2, signUp}
 ) => {
 
     console.log('render Register');
@@ -21,7 +23,7 @@ const Register: React.FC<RegisterPropsType> = React.memo((
             <div><InputNya info={'email'} value={email} onChange={setEmail}/></div>
             <div><InputNya info={'pass'} value={pass} onChange={setPass}/></div>
             <div><InputNya info={'pass confirm'} value={pass2} onChange={setPass2}/></div>
-            <div><ButtonNya info={'sign up'}>sign up</ButtonNya></div>
+            <div><ButtonNya info={'sign up'} onClick={signUp}>sign up</ButtonNya></div>
         </>
     );
 });

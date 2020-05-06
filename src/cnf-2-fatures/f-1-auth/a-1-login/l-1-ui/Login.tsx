@@ -22,7 +22,12 @@ const Login: React.FC<LoginPropsType> = React.memo((
         <>
             <div><InputNya info={'email'} value={email} onChange={setEmail}/></div>
             <div><InputNya info={'pass'} value={pass} onChange={setPass}/></div>
-            <div><InputNya type={'checkbox'} info={'remember'} checked={remember} onChange={setRemember}/></div>
+            <div>
+                <label>
+                    <InputNya type={'checkbox'} info={'remember'} checked={remember} onChange={setRemember}/>
+                    remember me
+                </label>
+            </div>
             <div>forgot? (will be link)</div>
             <div><ButtonNya info={'sign in'} onClick={signIn}>sign in</ButtonNya></div>
         </>

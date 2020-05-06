@@ -1,4 +1,4 @@
-import {InferActionsType} from "../../../../cnf-1-main/m-2-bll/store";
+import {InferActionsType} from "../../../../cnf-1-main/m-2-bll/actions";
 
 export type RegisterActionsType = InferActionsType<typeof RegisterActions>;
 

@@ -1,5 +1,7 @@
 import React, {ChangeEvent, useCallback, useState} from "react";
 import Register from "./Register";
+import {useDispatch} from "react-redux";
+import {signUp} from "../r-2-bll/registerThunk";
 
 const RegisterContainer = React.memo(() => {
     const [email, setEmail] = useState<string>('');
@@ -19,12 +21,19 @@ const RegisterContainer = React.memo(() => {
         [setPass2]
     );
 
+    const dispatch = useDispatch();
+    const signUpCallback = useCallback(
+        () => dispatch(signUp(email, pass, pass2)),
+        [email, pass, pass2, dispatch]
+    );
+
     console.log('render RegisterContainer');
     return (
         <Register
             email={email} setEmail={setEmailCallback}
             pass={pass} setPass={setPassCallback}
             pass2={pass2} setPass2={setPassCallback2}
+            signUp={signUpCallback}
         />
     );
 });

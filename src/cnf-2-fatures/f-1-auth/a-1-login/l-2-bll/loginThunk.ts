@@ -1,6 +1,7 @@
 import {ThunkAction, ThunkDispatch} from "redux-thunk";
-import {AppStoreType, ExtraArgumentNya, GetAppStoreType, ReturnVoid} from "../../../../cnf-1-main/m-2-bll/store";
+import {AppStoreType} from "../../../../cnf-1-main/m-2-bll/store";
 import {LoginActions, LoginActionsType} from "./LoginActions";
+import {ExtraArgumentNya, GetAppStoreType, ReturnVoid, tryCatch} from "../../../../cnf-1-main/m-2-bll/thunks";
 
 export const signIn =
     (email: string, password: string, rememberMe: boolean)
@@ -13,26 +14,27 @@ export const signIn =
             // signInLoading(dispatch, true);
             dispatch(LoginActions.setLoading(true));
 
-            try {
-                const data = {error: 'xxx'};
+            tryCatch(
+                () => {
+                    const data = {error: 'xxx'};
                     // = await SignInAPI.signIn(email, passwordCoding(password), rememberMe);
 
-                if (data.error) {
-                    console.log('Nya, Login Error!', data);
-                    dispatch(LoginActions.setError(data.error))
+                    if (data.error) {
+                        dispatch(LoginActions.setError(data.error));
 
-                } else {
-                    // setCookie('token', data.token, Math.floor(data.tokenDeathTime / 1000) - 180);
+                        console.log('Nya, Login Error!', data);
 
-                    // dispatch(nekoSetName(data.name));
-                    // signInSuccess(dispatch, true);
-                    dispatch(LoginActions.setSuccess(true));
+                    } else {
+                        // setCookie('token', data.token, Math.floor(data.tokenDeathTime / 1000) - 180);
 
-                    console.log('Nya, Login Success!', data)
-                }
-            } catch (e) {
-                dispatch(LoginActions.setError(e.response ? e.response.data.error : e.message));
+                        // dispatch(nekoSetName(data.name));
+                        // signInSuccess(dispatch, true);
+                        dispatch(LoginActions.setSuccess(true));
 
-                console.log('Nya, Login Error!', {...e})
-            }
+                        console.log('Nya, Login Success!', data)
+                    }
+                },
+                (e) => dispatch(LoginActions.setError(e)),
+                "Login"
+            );
         };
