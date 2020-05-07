@@ -4,7 +4,7 @@ import {RegisterActionsType} from "./RegisterActions";
 export const registerReducer =
     (state = RegisterInitState, action: RegisterActionsType): RegisterStateType => {
         switch (action.type) {
-            case "REGISTER_ERROR": {
+            case "register/SET_ERROR": {
                 return {
                     ...state,
                     error: action.error,
@@ -12,7 +12,7 @@ export const registerReducer =
                     success: false,
                 }
             }
-            case "REGISTER_LOADING": {
+            case "register/SET_LOADING": {
                 return {
                     ...state,
                     error: '',
@@ -20,7 +20,7 @@ export const registerReducer =
                     success: false,
                 }
             }
-            case "REGISTER_SUCCESS": {
+            case "register/SET_SUCCESS": {
                 return {
                     ...state,
                     error: '',

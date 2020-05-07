@@ -2,6 +2,7 @@ import React, {ReactNode} from "react";
 import {RouteComponentProps} from "react-router-dom";
 import LoginPage from "../../../../cnf-2-fatures/f-1-auth/a-1-login/l-1-ui/LoginPage";
 import RegisterPage from "../../../../cnf-2-fatures/f-1-auth/a-2-register/r-1-ui/RegisterPage";
+import ProfilePage from "../../../../cnf-2-fatures/f-1-auth/a-7-profile/p-1-ui/ProfilePage";
 
 export type PageType = {
     id: number;
@@ -25,7 +26,7 @@ export const pages: PageType[] = [
     //     id: 2, title: 'profile', path: PATH.PROFILE, params: '/:id', exact: true,
     //     page: (p) => <div>{p.match.params.id}</div>
     // },
-    {id: 2, title: 'profile', path: PATH.PROFILE, exact: true, page: () => <div>pr</div>},
+    {id: 2, title: 'profile', path: PATH.PROFILE, exact: true, page: () => <ProfilePage/>},
 
     {id: 9999, title: 'error404', page: () => <div>error404</div>}
 ];
