@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ec8cf8d0945e6476328cc6ff8c06a27f",
+    "revision": "51cd8b3b13c69599161b3e9817833849",
     "url": "/cards-nya-front/index.html"
   },
   {
-    "revision": "b05c2cb9cb240fb268ed",
+    "revision": "2a0e4c11e65c1bded62e",
     "url": "/cards-nya-front/static/css/main.9a3bc64c.chunk.css"
   },
   {
-    "revision": "233ae24cbb26e5006c3d",
-    "url": "/cards-nya-front/static/js/2.51143480.chunk.js"
+    "revision": "a7f39be9e904f7b8eaa6",
+    "url": "/cards-nya-front/static/js/2.fb97458f.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/cards-nya-front/static/js/2.51143480.chunk.js.LICENSE.txt"
+    "url": "/cards-nya-front/static/js/2.fb97458f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b05c2cb9cb240fb268ed",
-    "url": "/cards-nya-front/static/js/main.056bb736.chunk.js"
+    "revision": "2a0e4c11e65c1bded62e",
+    "url": "/cards-nya-front/static/js/main.02065ac1.chunk.js"
   },
   {
     "revision": "bacd4495509446e6954f",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cards-nya-front/precache-manifest.28f44d3c795c674ba2ba956575338ce1.js"
+  "/cards-nya-front/precache-manifest.bf2f374dc6216a190521ad4006667530.js"
 );
 
 self.addEventListener('message', (event) => {
