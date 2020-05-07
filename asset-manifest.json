@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cards-nya-front/static/css/main.9a3bc64c.chunk.css",
+    "main.js": "/cards-nya-front/static/js/main.056bb736.chunk.js",
+    "main.js.map": "/cards-nya-front/static/js/main.056bb736.chunk.js.map",
+    "runtime-main.js": "/cards-nya-front/static/js/runtime-main.564ac26c.js",
+    "runtime-main.js.map": "/cards-nya-front/static/js/runtime-main.564ac26c.js.map",
+    "static/js/2.51143480.chunk.js": "/cards-nya-front/static/js/2.51143480.chunk.js",
+    "static/js/2.51143480.chunk.js.map": "/cards-nya-front/static/js/2.51143480.chunk.js.map",
+    "index.html": "/cards-nya-front/index.html",
+    "precache-manifest.28f44d3c795c674ba2ba956575338ce1.js": "/cards-nya-front/precache-manifest.28f44d3c795c674ba2ba956575338ce1.js",
+    "service-worker.js": "/cards-nya-front/service-worker.js",
+    "static/css/main.9a3bc64c.chunk.css.map": "/cards-nya-front/static/css/main.9a3bc64c.chunk.css.map",
+    "static/js/2.51143480.chunk.js.LICENSE.txt": "/cards-nya-front/static/js/2.51143480.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.564ac26c.js",
+    "static/js/2.51143480.chunk.js",
+    "static/css/main.9a3bc64c.chunk.css",
+    "static/js/main.056bb736.chunk.js"
+  ]
+}
