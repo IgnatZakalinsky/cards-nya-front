@@ -21,10 +21,11 @@ export const PATH = {
 export const pages: PageType[] = [
     {id: 0, title: 'login', path: PATH.LOGIN, exact: true, page: () => <LoginPage/>},
     {id: 1, title: 'register', path: PATH.REGISTER, exact: true, page: () => <RegisterPage/>},
-    {
-        id: 2, title: 'profile', path: PATH.PROFILE, params: '/:id', exact: true,
-        page: (p) => <div>{p.match.params.id}</div>
-    },
+    // {
+    //     id: 2, title: 'profile', path: PATH.PROFILE, params: '/:id', exact: true,
+    //     page: (p) => <div>{p.match.params.id}</div>
+    // },
+    {id: 2, title: 'profile', path: PATH.PROFILE, exact: true, page: () => <div>pr</div>},
 
     {id: 9999, title: 'error404', page: () => <div>error404</div>}
 ];

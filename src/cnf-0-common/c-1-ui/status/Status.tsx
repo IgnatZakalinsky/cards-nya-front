@@ -6,12 +6,14 @@ export type StatusPropsType = {
     success: boolean;
     error: string;
 
+    first: boolean;
     info?: string;
 }
 
-const Status: React.FC<StatusPropsType> = React.memo(({loading, success, error, info}) => {
+const Status: React.FC<StatusPropsType> = React.memo(({loading, success, error, first, info}) => {
 
     DEV_VERSION && info && console.log('render Status-' + info);
+    if (first) return <div><br/></div>;
     return (
         <>
             {loading
@@ -23,7 +25,7 @@ const Status: React.FC<StatusPropsType> = React.memo(({loading, success, error, 
                         : <div><br/></div>
             }
         </>
-    )
+    );
 });
 
 export default Status;

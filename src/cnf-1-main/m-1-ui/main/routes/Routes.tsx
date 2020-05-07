@@ -6,7 +6,7 @@ import {DEV_VERSION} from "../../../../config";
 const mappedRoutes = pages.map((p: PageType) => (
     <Route
         key={'route-' + p.id}
-        path={p.path + (p.params || '')}
+        path={p.path && (p.path + (p.params || ''))}
         exact={p.exact}
         render={p.page}
     />
