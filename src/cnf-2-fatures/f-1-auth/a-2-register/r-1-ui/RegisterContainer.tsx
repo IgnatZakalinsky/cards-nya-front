@@ -1,8 +1,9 @@
 import React, {ChangeEvent, useCallback, useState} from "react";
 import Register from "./Register";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {signUp} from "../r-2-bll/registerThunk";
 import {DEV_VERSION} from "../../../../config";
+import {AppStoreType} from "../../../../cnf-1-main/m-2-bll/store";
 
 const RegisterContainer = React.memo(() => {
     const [email, setEmail] = useState<string>('');
@@ -27,6 +28,7 @@ const RegisterContainer = React.memo(() => {
         () => dispatch(signUp(email, pass, pass2)),
         [email, pass, pass2, dispatch]
     );
+    const {loading} = useSelector((store: AppStoreType) => store.register);
 
     DEV_VERSION && console.log('render RegisterContainer');
     return (
@@ -35,6 +37,7 @@ const RegisterContainer = React.memo(() => {
             pass={pass} setPass={setPassCallback}
             pass2={pass2} setPass2={setPassCallback2}
             signUp={signUpCallback}
+            loading={loading}
         />
     );
 });

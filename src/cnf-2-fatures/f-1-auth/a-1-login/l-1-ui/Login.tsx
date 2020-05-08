@@ -12,10 +12,11 @@ type LoginPropsType = {
     setRemember: (remember: ChangeEvent<HTMLInputElement>) => void;
 
     signIn: () => void;
+    loading: boolean;
 };
 
 const Login: React.FC<LoginPropsType> = React.memo((
-    {email, setEmail, pass, setPass, remember, setRemember, signIn}
+    {email, setEmail, pass, setPass, remember, setRemember, signIn, loading}
 ) => {
 
     DEV_VERSION && console.log('render Login');
@@ -30,7 +31,7 @@ const Login: React.FC<LoginPropsType> = React.memo((
                 </label>
             </div>
             <div>forgot? (will be link)</div>
-            <div><ButtonNya info={'sign in'} onClick={signIn}>sign in</ButtonNya></div>
+            <div><ButtonNya info={'sign in'} onClick={signIn} disabled={loading}>sign in</ButtonNya></div>
         </>
     );
 });
