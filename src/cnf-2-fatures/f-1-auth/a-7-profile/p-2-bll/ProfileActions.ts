@@ -21,5 +21,9 @@ export const ProfileActions = {
         type: 'profile/SET_USER',
         user,
     } as const),
+    setToken: (token: string) => ({
+        type: 'profile/SET_TOKEN',
+        token,
+    } as const),
 
 };
