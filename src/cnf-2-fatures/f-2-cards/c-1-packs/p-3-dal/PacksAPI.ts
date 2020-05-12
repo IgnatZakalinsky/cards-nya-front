@@ -1,6 +1,9 @@
 import {instance} from "../../../../cnf-1-main/m-3-dal/instance";
+import {PackType} from "../p-2-bll/PacksInitState";
 
 export type DataType = {
+    cardPacks: PackType[];
+
     success: boolean;
 
     token: string;

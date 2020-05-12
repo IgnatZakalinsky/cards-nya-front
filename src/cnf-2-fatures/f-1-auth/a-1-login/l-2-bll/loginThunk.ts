@@ -18,6 +18,7 @@ export const signIn =
             dispatch(LoginActions.setLoading(true));
 
             await tryCatch(
+                dispatch,
                 async () => {
                     const data = await LoginAPI.signIn(email, password, rememberMe);
 

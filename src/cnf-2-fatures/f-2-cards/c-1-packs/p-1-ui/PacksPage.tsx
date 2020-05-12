@@ -6,6 +6,7 @@ import ButtonNya from "../../../../cnf-0-common/c-1-ui/button/ButtonNya";
 import {getPacks} from "../p-2-bll/getPacksThunk";
 import {addPack} from "../p-2-bll/addPackThunk";
 import {deletePack} from "../p-2-bll/deletePackThunk";
+import PacksContainer from "./PacksContainer";
 
 const PacksPage = () => {
     // const {user} = useSelector((store: AppStoreType) => store.profile);
@@ -23,6 +24,8 @@ const PacksPage = () => {
             <ButtonNya onClick={getPacksCallback}>get</ButtonNya>
             <ButtonNya onClick={addPackCallback}>add</ButtonNya>
             <ButtonNya onClick={deletePackCallback}>del</ButtonNya>
+
+            <PacksContainer/>
         </div>
     );
 };

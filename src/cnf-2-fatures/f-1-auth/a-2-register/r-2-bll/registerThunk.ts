@@ -17,6 +17,7 @@ export const signUp =
             dispatch(RegisterActions.setLoading(true));
 
             await tryCatch(
+                dispatch,
                 async () => {
                     if (password !== pass2) dispatch(RegisterActions.setError('Passwords don\'t match!'));
                     else {
