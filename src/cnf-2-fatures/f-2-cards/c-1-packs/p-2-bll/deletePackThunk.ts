@@ -4,8 +4,9 @@ import {ExtraArgumentNya, GetAppStoreType, ReturnVoid, tryCatch} from "../../../
 import {DEV_VERSION} from "../../../../config";
 import {PacksAPI} from "../p-3-dal/PacksAPI";
 import {ProfileActions, ProfileActionsType} from "../../../f-1-auth/a-7-profile/p-2-bll/ProfileActions";
+import {getPacks} from "./getPacksThunk";
 
-export const deletePack = (): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumentNya, ProfileActionsType> =>
+export const deletePack = (id: string): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumentNya, ProfileActionsType> =>
     async (
         dispatch: ThunkDispatch<AppStoreType, ExtraArgumentNya, ProfileActionsType>,
         getStore: GetAppStoreType
@@ -20,7 +21,7 @@ export const deletePack = (): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumen
             dispatch,
             async () => {
 
-                const data = await PacksAPI.deletePack(token, '5eba790f6e034300045977e8');
+                const data = await PacksAPI.deletePack(token, id);
 
                 if (data.error) {
                     // dispatch(RegisterActions.setError(data.error));
@@ -34,6 +35,7 @@ export const deletePack = (): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumen
                     // signInSuccess(dispatch, true);
                     // dispatch(RegisterActions.setSuccess(true));
                     dispatch(ProfileActions.setToken(data.token));
+                    dispatch(getPacks());
 
                     DEV_VERSION && console.log('Nya, deletePack Success!', data)
                 }

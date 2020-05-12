@@ -3,7 +3,7 @@ import {TableNyaModelType} from "../../../../cnf-0-common/c-1-ui/table/TableNya"
 import {PackType} from "../p-2-bll/PacksInitState";
 import ButtonNya from "../../../../cnf-0-common/c-1-ui/button/ButtonNya";
 
-export const packsModel = (add: () => void): TableNyaModelType[] => [
+export const packsModel = (add: () => void, del: (id: string) => void): TableNyaModelType[] => [
     {
         title: (index, loading) => (
             <div key={'name-title-' + index} style={{width: 150}}>Name</div>
@@ -32,7 +32,7 @@ export const packsModel = (add: () => void): TableNyaModelType[] => [
         ),
         render: (dataItem: PackType, modelIndex, dataIndex, loading) => (
             <div key={'buttons-cell-' + dataItem._id} style={{width: 150}}>
-                {dataItem.grade}
+                <ButtonNya onClick={() => del(dataItem._id)}>del</ButtonNya>
             </div>
         )
     },

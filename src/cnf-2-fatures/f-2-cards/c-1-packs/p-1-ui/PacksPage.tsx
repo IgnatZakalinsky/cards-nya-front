@@ -14,7 +14,7 @@ const PacksPage = () => {
 
     const getPacksCallback = () => dispatch(getPacks());
     const addPackCallback = () => dispatch(addPack());
-    const deletePackCallback = () => dispatch(deletePack());
+    const deletePackCallback = () => dispatch(deletePack(''));
 
     DEV_VERSION && console.log('render PacksPage');
     return (
