@@ -22,5 +22,10 @@ export const PacksAPI = {
 
         return response.data;
     },
+    deletePack: async (token: string, id: string) => {
+        const response = await instance.delete<DataType>(`/cards/pack?token=${token}&id=${id}`);
+
+        return response.data;
+    },
 
 };
