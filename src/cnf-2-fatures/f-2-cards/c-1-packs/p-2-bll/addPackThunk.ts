@@ -4,6 +4,7 @@ import {ExtraArgumentNya, GetAppStoreType, ReturnVoid, tryCatch} from "../../../
 import {DEV_VERSION} from "../../../../config";
 import {PacksAPI} from "../p-3-dal/PacksAPI";
 import {ProfileActions, ProfileActionsType} from "../../../f-1-auth/a-7-profile/p-2-bll/ProfileActions";
+import {getPacks} from "./getPacksThunk";
 
 export const addPack = (): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumentNya, ProfileActionsType> =>
     async (
@@ -34,6 +35,7 @@ export const addPack = (): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumentNy
                     // signInSuccess(dispatch, true);
                     // dispatch(RegisterActions.setSuccess(true));
                     dispatch(ProfileActions.setToken(data.token));
+                    dispatch(getPacks());
 
                     DEV_VERSION && console.log('Nya, addPack Success!', data)
                 }
