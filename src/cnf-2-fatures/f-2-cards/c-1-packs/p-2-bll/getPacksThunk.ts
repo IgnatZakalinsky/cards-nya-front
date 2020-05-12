@@ -17,6 +17,7 @@ export const getPacks = (): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumentN
         const {token} = getStore().profile.user;
 
         await tryCatch(
+            dispatch,
             async () => {
 
                 const data = await PacksAPI.getPacks(token);

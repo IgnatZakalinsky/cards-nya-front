@@ -17,6 +17,7 @@ export const addPack = (): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumentNy
         const {token} = getStore().profile.user;
 
         await tryCatch(
+            dispatch,
             async () => {
 
                 const data = await PacksAPI.addPack(token);

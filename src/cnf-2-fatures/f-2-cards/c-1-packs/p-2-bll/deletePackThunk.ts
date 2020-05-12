@@ -17,9 +17,10 @@ export const deletePack = (): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumen
         const {token} = getStore().profile.user;
 
         await tryCatch(
+            dispatch,
             async () => {
 
-                const data = await PacksAPI.deletePack(token, '5eb6cb9a7a82672138e0d7c1');
+                const data = await PacksAPI.deletePack(token, '5eba790f6e034300045977e8');
 
                 if (data.error) {
                     // dispatch(RegisterActions.setError(data.error));
