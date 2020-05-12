@@ -7,6 +7,7 @@ import TableNya from "../../../../cnf-0-common/c-1-ui/table/TableNya";
 import {packsModel} from "./PacksModel";
 import {addPack} from "../p-2-bll/addPackThunk";
 import {deletePack} from "../p-2-bll/deletePackThunk";
+import {updatePack} from "../p-2-bll/updatePackThunk";
 
 const PacksContainer = React.memo(() => {
     const {packs} = useSelector((store: AppStoreType) => store.packs);
@@ -25,6 +26,7 @@ const PacksContainer = React.memo(() => {
     const model = packsModel(
         () => dispatch(addPack()),
         (id: string) => dispatch(deletePack(id)),
+        (id: string) => dispatch(updatePack(id)),
     );
 
     DEV_VERSION && console.log('render PacksContainer');
