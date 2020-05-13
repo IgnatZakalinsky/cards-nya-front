@@ -8,6 +8,8 @@ import {packsModel} from "./PacksModel";
 import {addPack} from "../p-2-bll/addPackThunk";
 import {deletePack} from "../p-2-bll/deletePackThunk";
 import {updatePack} from "../p-2-bll/updatePackThunk";
+import {getCards} from "../../c-2-cards/c-2-bll/getCardsThunk";
+import {addCard} from "../../c-2-cards/c-2-bll/addCardThunk";
 
 const PacksContainer = React.memo(() => {
     const {packs} = useSelector((store: AppStoreType) => store.packs);
@@ -27,6 +29,8 @@ const PacksContainer = React.memo(() => {
         () => dispatch(addPack()),
         (id: string) => dispatch(deletePack(id)),
         (id: string) => dispatch(updatePack(id)),
+        (id: string) => dispatch(getCards(id)),
+        (id: string) => dispatch(addCard(id)),
     );
 
     DEV_VERSION && console.log('render PacksContainer');

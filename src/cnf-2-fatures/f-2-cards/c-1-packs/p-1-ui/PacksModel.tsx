@@ -7,6 +7,8 @@ export const packsModel = (
     add: () => void,
     del: (id: string) => void,
     update: (id: string) => void,
+    cards: (id: string) => void,
+    addC: (id: string) => void,
 ): TableNyaModelType[] => [
     {
         title: (index, loading) => (
@@ -35,9 +37,11 @@ export const packsModel = (
             </div>
         ),
         render: (dataItem: PackType, modelIndex, dataIndex, loading) => (
-            <div key={'buttons-cell-' + dataItem._id} style={{width: 150}}>
+            <div key={'buttons-cell-' + dataItem._id} style={{width: 250}}>
                 <ButtonNya onClick={() => del(dataItem._id)}>del</ButtonNya>
                 <ButtonNya onClick={() => update(dataItem._id)}>update</ButtonNya>
+                <ButtonNya onClick={() => cards(dataItem._id)}>cards</ButtonNya>
+                <ButtonNya onClick={() => addC(dataItem._id)}>addC</ButtonNya>
             </div>
         )
     },
