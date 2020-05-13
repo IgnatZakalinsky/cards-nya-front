@@ -7,6 +7,8 @@ import {getCards} from "../c-2-bll/getCardsThunk";
 import {useParams} from "react-router-dom";
 import {cardsModel} from "./CardsModel";
 import {addCard} from "../c-2-bll/addCardThunk";
+import {deleteCard} from "../c-2-bll/deleteCardThunk";
+import {updateCard} from "../c-2-bll/updateCardThunk";
 
 const CardsContainer = React.memo(() => {
     const {cards} = useSelector((store: AppStoreType) => store.cards);
@@ -25,8 +27,8 @@ const CardsContainer = React.memo(() => {
 
     const model: TableNyaModelType[] = cardsModel(
         () => dispatch(addCard(id)),
-        (id: string) => {},
-        (id: string) => {},
+        (card_id: string) => dispatch(deleteCard(card_id, id)),
+        (card_id: string) => dispatch(updateCard(card_id, id)),
     );
 
     DEV_VERSION && console.log('render CardsContainer, id:' + id);

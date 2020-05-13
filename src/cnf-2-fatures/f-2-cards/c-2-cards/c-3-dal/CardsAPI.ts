@@ -28,21 +28,21 @@ export const CardsAPI = {
 
         return response.data;
     },
-    // updatePack: async (token: string, id: string) => {
-    //     const response = await instance.put<DataType>(`/cards/pack`, {
-    //         token,
-    //         cardsPack: {
-    //             _id: id,
-    //             name: 'update new',
-    //         }
-    //     });
-    //
-    //     return response.data;
-    // },
-    // deletePack: async (token: string, id: string) => {
-    //     const response = await instance.delete<DataType>(`/cards/pack?token=${token}&id=${id}`);
-    //
-    //     return response.data;
-    // },
+    updateCard: async (token: string, id: string) => {
+        const response = await instance.put<DataType>(`/cards/card`, {
+            token,
+            card: {
+                _id: id,
+                question: 'updated question',
+            }
+        });
+
+        return response.data;
+    },
+    deleteCard: async (token: string, id: string) => {
+        const response = await instance.delete<DataType>(`/cards/card?token=${token}&id=${id}`);
+
+        return response.data;
+    },
 
 };
