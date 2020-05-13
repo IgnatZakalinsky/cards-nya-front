@@ -4,6 +4,7 @@ import LoginPage from "../../../../cnf-2-fatures/f-1-auth/a-1-login/l-1-ui/Login
 import RegisterPage from "../../../../cnf-2-fatures/f-1-auth/a-2-register/r-1-ui/RegisterPage";
 import ProfilePage from "../../../../cnf-2-fatures/f-1-auth/a-7-profile/p-1-ui/ProfilePage";
 import PacksPage from "../../../../cnf-2-fatures/f-2-cards/c-1-packs/p-1-ui/PacksPage";
+import CardsPage from "../../../../cnf-2-fatures/f-2-cards/c-2-cards/c-1-ui/CardsPage";
 
 export type PageType = {
     id: number;
@@ -18,7 +19,8 @@ export const PATH = {
     LOGIN: '/login',
     REGISTER: '/register',
     PROFILE: '/profile',
-    PACKS: '/packs'
+    PACKS: '/packs',
+    CARDS: '/cards',
 };
 
 export const pages: PageType[] = [
@@ -30,6 +32,7 @@ export const pages: PageType[] = [
     // },
     {id: 2, title: 'profile', path: PATH.PROFILE, exact: true, page: () => <ProfilePage/>},
     {id: 3, title: 'packs', path: PATH.PACKS, exact: true, page: () => <PacksPage/>},
+    {id: 4, title: 'cards', path: PATH.CARDS, params: '/:id', exact: true, page: () => <CardsPage/>},
 
     {id: 9999, title: 'error404', page: () => <div>error404</div>}
 ];

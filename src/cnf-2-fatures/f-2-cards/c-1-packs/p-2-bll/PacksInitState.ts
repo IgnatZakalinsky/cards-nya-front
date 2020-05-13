@@ -15,10 +15,10 @@ export type PackType = {
     updated: string;
 }
 
-export type PacksInitStateType = {
+export type PacksStateType = {
     packs: PackType[];
 }
 
-export const PacksInitState: PacksInitStateType = {
+export const PacksInitState: PacksStateType = {
     packs: [],
 };

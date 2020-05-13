@@ -4,10 +4,11 @@ import {ExtraArgumentNya, GetAppStoreType, ReturnVoid, tryCatch} from "../../../
 import {DEV_VERSION} from "../../../../config";
 import {ProfileActions, ProfileActionsType} from "../../../f-1-auth/a-7-profile/p-2-bll/ProfileActions";
 import {CardsAPI} from "../c-3-dal/CardsAPI";
+import {CardsActions, CardsActionsType} from "./CardsActions";
 
-export const getCards = (id: string): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumentNya, ProfileActionsType> =>
+export const getCards = (id: string): ThunkAction<ReturnVoid, AppStoreType, ExtraArgumentNya, ProfileActionsType | CardsActionsType> =>
     async (
-        dispatch: ThunkDispatch<AppStoreType, ExtraArgumentNya, ProfileActionsType>,
+        dispatch: ThunkDispatch<AppStoreType, ExtraArgumentNya, ProfileActionsType | CardsActionsType>,
         getStore: GetAppStoreType
     ) => {
         // nekoClear(dispatch);
@@ -32,7 +33,7 @@ export const getCards = (id: string): ThunkAction<ReturnVoid, AppStoreType, Extr
 
                     // dispatch(nekoSetName(data.name));
                     // signInSuccess(dispatch, true);
-                    // dispatch(PacksActions.setPacks(data.cardPacks));
+                    dispatch(CardsActions.setCards(data.cards));
                     dispatch(ProfileActions.setToken(data.token));
 
                     DEV_VERSION && console.log('Nya, getCards Success!', data)

@@ -1,7 +1,8 @@
 import {instance} from "../../../../cnf-1-main/m-3-dal/instance";
+import {CardType} from "../c-2-bll/CardsInitState";
 
 export type DataType = {
-    // cardPacks: PackType[];
+    cards: CardType[];
 
     success: boolean;
 
