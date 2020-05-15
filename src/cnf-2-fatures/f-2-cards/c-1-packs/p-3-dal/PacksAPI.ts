@@ -13,7 +13,7 @@ export type DataType = {
 
 export const PacksAPI = {
     getPacks: async (token: string) => {
-        const response = await instance.get<DataType>(`/cards/pack?token=${token}`);
+        const response = await instance.get<DataType>(`/cards/pack?token=${token}&pageCount=1000`);
 
         return response.data;
     },

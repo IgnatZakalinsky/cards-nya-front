@@ -23,6 +23,7 @@ export const CardsAPI = {
             card: {
                 cardsPack_id,
                 question: 'new!',
+                grade: Math.random() * 5,
             },
         });
 

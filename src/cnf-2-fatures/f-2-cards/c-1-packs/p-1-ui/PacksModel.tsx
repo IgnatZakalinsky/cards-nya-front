@@ -41,6 +41,7 @@ export const packsModel = (
                 <ButtonNya onClick={() => del(dataItem._id)}>del</ButtonNya>
                 <ButtonNya onClick={() => update(dataItem._id)}>update</ButtonNya>
                 <LinkNya to={PATH.CARDS + '/' + dataItem._id}>cards</LinkNya>
+                <LinkNya to={PATH.LEARN + '/' + dataItem._id}>learn</LinkNya>
             </div>
         )
     },

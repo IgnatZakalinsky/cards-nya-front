@@ -23,7 +23,7 @@ const CardsContainer = React.memo(() => {
         return () => {
             console.log('PacksContainer useEffect off');
         }
-    }, [dispatch]);
+    }, [dispatch, id]);
 
     const model: TableNyaModelType[] = cardsModel(
         () => dispatch(addCard(id)),
