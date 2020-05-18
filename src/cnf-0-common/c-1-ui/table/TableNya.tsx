@@ -25,13 +25,13 @@ const TableNya: React.FC<TableNyaPropsType> = (
             {title}
 
             <div style={{border: '1px solid red', width: '100%', display: "flex", ...headerStyle}}>
-                {model.map((m: any, index: number) => m.title(index, loading))}
+                {model.map((m, index) => m.title(index, loading))}
             </div>
 
             <div style={{border: '1px solid lime', width: '100%', ...rowsStyle}}>
                 {data.map((dataItem: any, dataIndex: number) => (
                     <div
-                        key={title + '-row-' + dataItem._id || dataIndex}
+                        key={title + '-row-' + (dataItem._id || dataIndex)}
                         style={{width: '100%', display: "flex", ...rowStyle}}
                     >
                         {model.map((m, modelIndex) =>
