@@ -24,7 +24,9 @@ export const PacksAPI = {
     addPack: async (token: string) => {
         const response = await instance.post<DataType>(`/cards/pack`, {
             token,
-            cardsPack: {}
+            cardsPack: {
+                deckCover: 'some cover'
+            }
         });
 
         return response.data;

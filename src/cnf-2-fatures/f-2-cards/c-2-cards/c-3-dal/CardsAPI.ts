@@ -24,6 +24,7 @@ export const CardsAPI = {
                 cardsPack_id,
                 question: 'new!',
                 grade: Math.random() * 5,
+                questionImg: 'some img'
             },
         });
 
@@ -35,6 +36,7 @@ export const CardsAPI = {
             card: {
                 _id: id,
                 question: 'updated question',
+                answerImg: 'some answer img'
             }
         });
 
