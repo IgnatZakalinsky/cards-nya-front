@@ -6,6 +6,7 @@ import ProfilePage from "../../../../cnf-2-fatures/f-1-auth/a-7-profile/p-1-ui/P
 import PacksPage from "../../../../cnf-2-fatures/f-2-cards/c-1-packs/p-1-ui/PacksPage";
 import CardsPage from "../../../../cnf-2-fatures/f-2-cards/c-2-cards/c-1-ui/CardsPage";
 import LearnPage from "../../../../cnf-2-fatures/f-3-learn/l-1-ui/LearnPage";
+import TestMapPage from "../../../../cnf-2-fatures/f-4-map/m-1-ui/TestMapPage";
 
 export type PageType = {
     id: number;
@@ -23,6 +24,7 @@ export const PATH = {
     PACKS: '/packs',
     CARDS: '/cards',
     LEARN: '/learn',
+    TEST_MAP: '/test-map'
 };
 
 export const pages: PageType[] = [
@@ -36,6 +38,7 @@ export const pages: PageType[] = [
     {id: 3, title: 'packs', path: PATH.PACKS, exact: true, page: () => <PacksPage/>},
     {id: 4, title: 'cards', path: PATH.CARDS, params: '/:id', exact: true, page: () => <CardsPage/>},
     {id: 5, title: 'learn', path: PATH.LEARN, params: '/:id', exact: true, page: () => <LearnPage/>},
+    {id: 6, title: 'test map', path: PATH.TEST_MAP, exact: true, page: () => <TestMapPage/>},
 
     {id: 9999, title: 'error404', page: () => <div>error404</div>}
 ];
