@@ -41,7 +41,7 @@ export const pages: PageType[] = [
     {id: 4, title: 'cards', path: PATH.CARDS, params: '/:id', exact: true, page: () => <CardsPage/>},
     {id: 5, title: 'learn', path: PATH.LEARN, params: '/:id', exact: true, page: () => <LearnPage/>},
     {id: 6, title: 'test map', path: PATH.TEST_MAP, exact: true, page: () => <TestMapPage/>},
-    {id: 6, title: 'test', path: PATH.TEST, exact: true, page: () => <TestPage/>},
+    {id: 7, title: 'test', path: PATH.TEST, exact: true, page: () => <TestPage/>},
 
     {id: 9999, title: 'error404', page: () => <div>error404</div>}
 ];
