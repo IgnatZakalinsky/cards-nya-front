@@ -29,5 +29,10 @@ export const ProfileAPI = {
 
         return response.data;
     },
+    addGrade: async (token: string, grade: string, card_id: string) => {
+        const response = await instance.put<SignInDataType>('/cards/grade', {token, grade, card_id});
+
+        return response.data;
+    },
 
 };

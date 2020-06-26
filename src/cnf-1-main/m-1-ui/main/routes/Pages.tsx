@@ -18,6 +18,7 @@ export type PageType = {
     page: (props: RouteComponentProps<any>) => ReactNode;
 };
 
+// export const PATH: {[s: string]: string} = {
 export const PATH = {
     LOGIN: '/login',
     REGISTER: '/register',
