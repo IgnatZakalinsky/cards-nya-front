@@ -67,6 +67,7 @@ const LearnPage = () => {
         setIsChecked(false);
 
         if (cards.length > 0) {
+            // dispatch
             setCard(getCard(cards));
         } else {
 
