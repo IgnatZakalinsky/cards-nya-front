@@ -19,6 +19,8 @@ const Login: React.FC<LoginPropsType> = React.memo((
     {email, setEmail, pass, setPass, remember, setRemember, signIn, loading}
 ) => {
 
+    const x = 1;
+
     DEV_VERSION && console.log('render Login');
     return (
         <>
